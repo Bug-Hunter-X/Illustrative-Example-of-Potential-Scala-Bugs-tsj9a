@@ -1,0 +1,15 @@
+```scala
+class MyClass(val x: Int) {
+  def myMethod(y: Int): Int = {
+    //Adding null checks to handle potential errors
+    if(x == null || y == null) return 0
+    x + y
+  }
+}
+
+object Main extends App {
+  val obj = new MyClass(5)
+  println(obj.myMethod(10)) // Output: 15
+  println(obj.myMethod(null)) //Output: 0 (Handling potential null)
+}
+```
